@@ -75,7 +75,7 @@ createScriptButton("Muscle Legends", "https://raw.githubusercontent.com/ahmadsga
 createScriptButton("Arsenal", "https://raw.githubusercontent.com/Datr0x/Arsenal-Script/refs/heads/main/Arsenal%20Script")
 createScriptButton("MM2", "https://raw.githubusercontent.com/script-by/Nx-Crazy/main/Silent-Aim-MM2")
 createScriptButton("Pet Sim 99", "https://pastebin.com/raw/KxdCyeTn")
-createScriptButton("PS99 Gem Dupe", "https://raw.githubusercontent.com/vc99950/InfgemsPS99/refs/heads/main/gemspawner")
+createScriptButton("PS99 Gem Dupe", "https://raw.githubusercontent.com/Datr0x/Gem-Dupe-Script/refs/heads/main/Pet%20Simulator%20Script")
 createScriptButton("Blox Fruits", "https://raw.githubusercontent.com/Datr0x/Bloxfruits-Script/refs/heads/main/Blox%20Fruits%20Script")
 createScriptButton("Doors", "https://pastebin.com/raw/9QPGnLx6")
 createScriptButton("Da Hood", "https://raw.githubusercontent.com/toosiwhip/statueware/main/dahoodv1.lua")
