@@ -67,7 +67,7 @@ local function createScriptButton(name, url, async)
 end
 
 -- Add Game Scripts
-createScriptButton("KAT", "https://raw.githubusercontent.com/JNHHGaming/Kat12/main/Kat")
+createScriptButton("KAT", "https://pastebin.com/raw/LytWnVx1")
 createScriptButton("Phantom Forces", "https://raw.githubusercontent.com/dementiaenjoyer/homohack/main/homohack.lua")
 createScriptButton("Blade Ball", "https://raw.githubusercontent.com/FFJ1/Roblox-Exploits/main/scripts/autoparry.lua")
 createScriptButton("Legends of Speed", "https://pastebin.com/raw/mqGPg69N")
