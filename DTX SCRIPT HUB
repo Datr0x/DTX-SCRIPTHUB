@@ -1,0 +1,165 @@
+-- Load Rayfield UI Library
+local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
+
+-- Display Loading Message
+print("Loading GUI...")
+print("Hello")
+
+-- Create Main Window
+local Window = Rayfield:CreateWindow({
+   Name = "DTX | Script Hub",
+   LoadingTitle = "DTX | Script Hub",
+   LoadingSubtitle = "One of the newest and best script hubs.",
+   ConfigurationSaving = {
+      Enabled = true,
+      FolderName = nil,
+      FileName = "DTX_ScriptHub"
+   },
+   Discord = {
+      Enabled = true,
+      Invite = "zYJeSekDJN",
+      RememberJoins = false
+   },
+   KeySystem = true,
+   KeySettings = {
+      Title = "DTX | Script Hub",
+      Subtitle = "Key System",
+      Note = "Use the provided key to unlock the hub.",
+      FileName = "DTX_Key",
+      SaveKey = true,
+      GrabKeyFromSite = false,
+      Key = {"Bestscripthubdtx0710"}
+   }
+})
+
+-- Tabs and Sections
+local ScriptsTab = Window:CreateTab("Scripts", nil)
+local ScriptsSection = ScriptsTab:CreateSection("Game Scripts")
+
+-- Notification
+Rayfield:Notify({
+   Title = "DTX",
+   Content = "Welcome to DTX, a top-tier Roblox script hub.",
+   Duration = 6.5,
+   Image = 4483362458,
+   Actions = {
+      Ignore = {
+         Name = "Okay!",
+         Callback = function()
+            print("User acknowledged welcome message.")
+         end
+      }
+   }
+})
+
+-- Helper Function to Create Buttons
+local function createScriptButton(name, url, async)
+   ScriptsTab:CreateButton({
+      Name = name,
+      Callback = function()
+         if async then
+            loadstring(game:HttpGetAsync(url))()
+         else
+            loadstring(game:HttpGet(url))()
+         end
+      end,
+   })
+end
+
+-- Add Game Scripts
+createScriptButton("KAT", "https://raw.githubusercontent.com/JNHHGaming/Kat12/main/Kat")
+createScriptButton("Phantom Forces", "https://raw.githubusercontent.com/dementiaenjoyer/homohack/main/homohack.lua")
+createScriptButton("Blade Ball", "https://raw.githubusercontent.com/FFJ1/Roblox-Exploits/main/scripts/autoparry.lua")
+createScriptButton("Legends of Speed", "https://pastebin.com/raw/mqGPg69N")
+createScriptButton("Muscle Legends", "https://raw.githubusercontent.com/ahmadsgamer2/Script--Game/main/Muscle-Legends", true)
+createScriptButton("Arsenal", "https://raw.githubusercontent.com/laeraz/midnightcc/main/public.lua")
+createScriptButton("MM2", "https://raw.githubusercontent.com/script-by/Nx-Crazy/main/Silent-Aim-MM2")
+createScriptButton("Pet Sim 99", "https://pastebin.com/raw/CWdd7UZj")
+createScriptButton("PS99 Gem Dupe", "https://raw.githubusercontent.com/OfficialPS99Developer/PS99OfficialScript/main/PS99OfficialScript")
+createScriptButton("Blox Fruits", "https://raw.githubusercontent.com/REDzHUB/BloxFruits/main/redz9999")
+createScriptButton("Doors", "https://pastebin.com/raw/9QPGnLx6")
+createScriptButton("Da Hood", "https://raw.githubusercontent.com/toosiwhip/statueware/main/dahoodv1.lua")
+createScriptButton("Trident Survival", "https://raw.githubusercontent.com/toosiwhip/statueware/main/dahoodv1.lua")
+createScriptButton("Evade", "https://raw.githubusercontent.com/XenonLUA/Xenon/main/Evade.lua")
+createScriptButton("Survive The Killer", "https://raw.githubusercontent.com/Milan08Studio/ChairWare/main/main.lua")
+createScriptButton("Bedwars", "https://raw.githubusercontent.com/7GrandDadPGN/VapeV4ForRoblox/main/NewMainScript.lua")
+createScriptButton("Adopt Me", "https://dpaste.com/GRR4YVSDC.txt")
+createScriptButton("Lumber Tycoon 2", "https://raw.githubusercontent.com/frencaliber/LuaWareLoader.lw/main/luawareloader.wtf")
+createScriptButton("Flag Wars", "https://raw.githubusercontent.com/frencaliber/LuaWareLoader.lw/main/luawareloader.wtf")
+createScriptButton("Slap Battles", "https://raw.githubusercontent.com/Giangplay/Slap_Battles/main/Slap_Battles.lua")
+createScriptButton("Work At Pizza Place (Placeholder)", "https://example.com")
+
+-- Admin Section
+ScriptsTab:CreateSection("Admin Scripts")
+createScriptButton("Infinite Yield", "https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source")
+createScriptButton("Butter Admin", "https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source")
+
+-- Crashers
+ScriptsTab:CreateSection("Crashers")
+createScriptButton("ZhenX201 - Server Crasher", "https://raw.githubusercontent.com/ZhenX201/Crash-server/main/source")
+
+-- Chat Bypass
+ScriptsTab:CreateSection("Chat Tools")
+createScriptButton("Chat Bypass 1", "https://pastes.io/raw/lstrrfipqq")
+createScriptButton("Chat Bypass 2", "https://raw.githubusercontent.com/Synergy-Networks/products/main/BetterBypasser/loader.lua", true)
+createScriptButton("Chat Bypass 3", "https://pastes.io/raw/lstrrfipqq")
+
+-- Other Section
+ScriptsTab:CreateSection("Other Tools")
+createScriptButton("Rizzler Script", "https://raw.githubusercontent.com/Synergy-Networks/OpenSource/main/rizzler.lua")
+createScriptButton("Thug Shaker", "https://raw.githubusercontent.com/MastersMZ-Scripts/Scripts/main/Thug%20shaker.lua")
+
+-- Universal Section
+ScriptsTab:CreateSection("Universal Features")
+createScriptButton("Airhub (Aimbot + ESP)", "https://raw.githubusercontent.com/Exunys/AirHub/main/AirHub.lua")
+
+-- Built-in Features
+local BuiltTab = Window:CreateTab("Built-In", nil)
+BuiltTab:CreateSection("Player Utilities")
+createScriptButton("Infinite Jump", "https://cdn.wearedevs.net/scripts/Infinite%20Jump.txt")
+createScriptButton("Headless + Korblox", "https://pastebin.com/raw/H5yx10Jq")
+createScriptButton("ESP", "https://raw.githubusercontent.com/TheNuggetEater05/ekaMiffutSmodnaR/main/GlobalR6SkeletonESP.lua")
+createScriptButton("Tool GUI", "https://pastebin.com/raw/AZVi2tuK")
+createScriptButton("Laser Gun", "https://pastebin.com/raw/SBbr8YHZ")
+
+-- Save Game Instance
+BuiltTab:CreateButton({
+   Name = "Save Game",
+   Callback = function()
+      saveinstance()
+   end,
+})
+
+-- Sliders
+BuiltTab:CreateSlider({
+   Name = "Player Speed",
+   Range = {0, 100},
+   Increment = 1,
+   Suffix = "Speed",
+   CurrentValue = 16,
+   Flag = "SpeedSlider",
+   Callback = function(Value)
+      game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Value
+   end,
+})
+
+BuiltTab:CreateSlider({
+   Name = "Player Size [Not Functional]",
+   Range = {0, 100},
+   Increment = 1,
+   Suffix = "Size",
+   CurrentValue = 16,
+   Flag = "SizeSlider",
+   Callback = function(Value)
+      -- Note: Humanoid does not have a Size property. Placeholder only.
+      print("Attempt to set size to", Value)
+   end,
+})
+
+-- Credits Tab
+local CreditsTab = Window:CreateTab("Credits", nil)
+CreditsTab:CreateSection("Project Credits")
+CreditsTab:CreateButton({Name = "Datrox - Creator", Callback = function() end})
+CreditsTab:CreateButton({Name = "Datrox - Support & Friend", Callback = function() end})
+
+print("DTX Script Hub successfully loaded.")
