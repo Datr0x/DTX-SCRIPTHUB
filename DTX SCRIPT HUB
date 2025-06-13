@@ -13,7 +13,7 @@ local Window = Rayfield:CreateWindow({
    ConfigurationSaving = {
       Enabled = true,
       FolderName = nil,
-      FileName = "DTX_ScriptHub"
+      FileName = "DTX ScriptHub"
    },
    Discord = {
       Enabled = true,
